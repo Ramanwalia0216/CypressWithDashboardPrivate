@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2019-11-08T08:01:57.681Z",
-    "end": "2019-11-08T08:02:01.462Z",
-    "duration": 3781,
+    "start": "2019-11-08T13:13:48.606Z",
+    "end": "2019-11-08T13:13:51.507Z",
+    "duration": 2901,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "49e25362-15d1-4faa-9602-c0305f6a2d84",
+      "uuid": "99aa9996-ccf4-465f-97d3-e078aaa040bf",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bfe6e0c7-3ce4-4a52-8478-39bfd197e081",
+          "uuid": "3a9ce6fc-a391-4cc7-81c5-bb60604a69ec",
           "title": "Aliasing",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": ".as() - alias a DOM element for later use",
               "fullTitle": "Aliasing .as() - alias a DOM element for later use",
               "timedOut": null,
-              "duration": 667,
+              "duration": 626,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "// https://on.cypress.io/as\n// Alias a DOM element for use later\n// We don't have to traverse to the element\n// later in our code, we reference it with @\ncy.get('.as-table').find('tbody>tr').first().find('td').first().find('button').as('firstBtn'); // when we reference the alias, we place an\n// @ in front of its name\ncy.get('@firstBtn').click();\ncy.get('@firstBtn').should('have.class', 'btn-success').and('contain', 'Changed');",
               "err": {},
-              "uuid": "ee6634c0-3476-4348-9fa4-d9142cde4e7e",
-              "parentUUID": "bfe6e0c7-3ce4-4a52-8478-39bfd197e081",
+              "uuid": "a8f375e7-2ded-45a4-a997-5b8cbb6674d0",
+              "parentUUID": "3a9ce6fc-a391-4cc7-81c5-bb60604a69ec",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": ".as() - alias a route for later use",
               "fullTitle": "Aliasing .as() - alias a route for later use",
               "timedOut": null,
-              "duration": 1710,
+              "duration": 1253,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "// Alias the route to wait for its response\ncy.server();\ncy.route('GET', 'comments/*').as('getComment'); // we have code that gets a comment when\n// the button is clicked in scripts.js\ncy.get('.network-btn').click(); // https://on.cypress.io/wait\ncy.wait('@getComment').its('status').should('eq', 200);",
               "err": {},
-              "uuid": "d70bcb93-ce4e-40d1-85c6-c5af8dd7eede",
-              "parentUUID": "bfe6e0c7-3ce4-4a52-8478-39bfd197e081",
+              "uuid": "9f0bffd2-2eb8-489d-a8f3-a77eb95ba777",
+              "parentUUID": "3a9ce6fc-a391-4cc7-81c5-bb60604a69ec",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ee6634c0-3476-4348-9fa4-d9142cde4e7e",
-            "d70bcb93-ce4e-40d1-85c6-c5af8dd7eede"
+            "a8f375e7-2ded-45a4-a997-5b8cbb6674d0",
+            "9f0bffd2-2eb8-489d-a8f3-a77eb95ba777"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2377,
+          "duration": 1879,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
