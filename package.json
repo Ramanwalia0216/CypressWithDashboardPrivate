@@ -9,7 +9,7 @@
         "open:cypress": "cypress open",
         "delete:reports": "rm cypress/results/* || true &&rm ./mochawesome.json || true",
         "create:report": "npx mochawesome-merge --reportDir cypress/results > mochawesome.json &&npx mochawesome-report-generator mochawesome.json",
-        "test:build": "test &&create:report",
+        "test:build": "npm run test &&npm run create:report",
         "test:dashboard": "npm run dashboardTest -- --record --key 117d3403-ffed-441d-9ae9-8b15f80686b4 --reporter mochawesome"
     },
     "author": "Raman Walia",
