@@ -4,10 +4,10 @@
     "description": "Cypress POC",
     "main": "index.js",
     "scripts": {
-        "test": "npm run delete:reports &&cypress run  --reporter mochawesome --spec cypress/integration/examples/actions.spec.js,cypress/integration/examples/assertions.spec.js,cypress/integration/examples/aliasing.spec.js",
+        "test": "npm run delete:reports &&cypress run --reporter mochawesome --spec cypress/integration/examples/actions.spec.js,cypress/integration/examples/assertions.spec.js",
         "dashboardTest": "npm run delete:reports &&cypress run --spec cypress/integration/examples/actions.spec.js,cypress/integration/examples/assertions.spec.js,cypress/integration/examples/aliasing.spec.js",
         "open:cypress": "cypress open",
-        "delete:reports": "rm cypress/results/* || true &&rm ./mochawesome.json || true",
+        "delete:reports": "rm cypress/results/* || true &&rm ./mochawesome.json || true &&rm cypress/videos/examples/* || true",
         "create:report": "npx mochawesome-merge --reportDir cypress/results > mochawesome.json &&npx mochawesome-report-generator mochawesome.json",
         "test:build": "npm run test &&npm run create:report",
         "test:dashboard": "npm run dashboardTest -- --record --key 117d3403-ffed-441d-9ae9-8b15f80686b4 --reporter mochawesome"
