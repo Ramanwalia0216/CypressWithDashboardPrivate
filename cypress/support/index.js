@@ -18,3 +18,30 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+//import '@cypress/code-coverage/support'  -- commented this
+const addContext = require('mochawesome/addContext')
+// Alternatively you can use CommonJS syntax:
+// require('./commands')
+
+// return filePath to addContext to mochawesome reporter
+
+Cypress.on('test:after:run', (test, runnable) => {
+    if (test.state === 'failed') {
+        const screenshotFileName = `${runnable.parent.title} -- ${test.title} (failed).png`
+        addContext({ test }, `assets/${Cypress.spec.name}/${screenshotFileName}`)
+        //addContext({ test }, `./${Cypress.spec.name}/${runnable.parent.title.replace(':', '')} -- ${test.title} (failed).png`)
+    }
+
+    // if (test.state === 'pass') {
+    //     const screenshotFileName = `${runnable.parent.title} -- ${test.title} (pass).png`
+    //     addContext({ test }, `assets/${Cypress.spec.name}/${screenshotFileName}`)
+    // }
+
+    if (test.state === 'failed') {
+        //const screenshotFileName = `${runnable.parent.title} -- ${test.title} (failed).mp4`
+        //addContext({ test }, `assets/${Cypress.spec.name}/${screenshotFileName}`)
+        addContext({ test }, `assets/${Cypress.spec.name}.mp4`)
+        ///${runnable.parent.title.replace('.', '')} -- ${test.title} (failed).mp4
+    }
+})

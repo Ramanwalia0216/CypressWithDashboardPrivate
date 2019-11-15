@@ -21,7 +21,7 @@ context('Aliasing', () => {
     cy.get('@firstBtn').click()
 
     cy.get('@firstBtn')
-      .should('have.class', 'btn-success')
+      .should('have.class', 'btn-success.fail') // Made intetional changes to fail test case
       .and('contain', 'Changed')
   })
 
