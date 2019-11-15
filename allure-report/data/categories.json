@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Timed out retrying: expected '<input#email1.form-control.action-email>' to have value 'slow.typing@email.com.something', but the value was 'slow.typing@email.com'",
+      "children" : [ {
+        "name" : ".type() - type into a DOM element",
+        "uid" : "39282a015ace5a7b",
+        "parentUid" : "4a2290a4fe9d8e056786c94283d3fb62",
+        "status" : "broken",
+        "time" : {
+          "start" : 1573708144564,
+          "stop" : 1573708166864,
+          "duration" : 22300
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4a2290a4fe9d8e056786c94283d3fb62"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

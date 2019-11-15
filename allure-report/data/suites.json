@@ -1,0 +1,39 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Actions",
+    "children" : [ {
+      "name" : ".type() - type into a DOM element",
+      "uid" : "39282a015ace5a7b",
+      "parentUid" : "e4eb7c6362a258d35885a68faf6e31c7",
+      "status" : "broken",
+      "time" : {
+        "start" : 1573708144564,
+        "stop" : 1573708166864,
+        "duration" : 22300
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "e4eb7c6362a258d35885a68faf6e31c7"
+  }, {
+    "name" : "Assertions Implicit Assertions",
+    "children" : [ {
+      "name" : ".should() - make an assertion about the current subject",
+      "uid" : "3ba29d3c7a30a845",
+      "parentUid" : "2d7600f6a5d722b595eb6b501e2b8bbe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1573708177698,
+        "stop" : 1573708179475,
+        "duration" : 1777
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "2d7600f6a5d722b595eb6b501e2b8bbe"
+  } ]
+}

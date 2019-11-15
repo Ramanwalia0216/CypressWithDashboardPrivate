@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-11-15T06:19:45.970Z",
+    "end": "2019-11-15T06:19:48.649Z",
+    "duration": 2679,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3f934682-5d3a-4c70-bf4b-4dbf10b2880e",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "93c76cc4-da3f-41f2-b102-63fb407d2bdd",
+          "title": "Assertions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "bf66b62f-4117-49f9-9842-892164dac006",
+              "title": "Implicit Assertions",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": ".should() - make an assertion about the current subject",
+                  "fullTitle": "Assertions Implicit Assertions .should() - make an assertion about the current subject",
+                  "timedOut": null,
+                  "duration": 1111,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// https://on.cypress.io/should\ncy.get('.assertion-table').find('tbody tr:last').should('have.class', 'success').find('td').first() // checking the text of the <td> element in various ways\n.should('have.text', 'Column content').should('contain', 'Column content').should('have.html', 'Column content') // chai-jquery uses \"is()\" to check if element matches selector\n.should('match', 'td') // to match text content against a regular expression\n// first need to invoke jQuery method text()\n// and then match using regular expression\n.invoke('text').should('match', /column content/i); // a better way to check element's text content against a regular expression\n// is to use \"cy.contains\"\n// https://on.cypress.io/contains\ncy.get('.assertion-table').find('tbody tr:last') // finds first <td> element with text content matching regular expression\n.contains('td', /column content/i).should('be.visible'); // for more information about asserting element's text\n// see https://on.cypress.io/using-cypress-faq#How-do-I-get-an-element’s-text-contents",
+                  "err": {},
+                  "uuid": "3b001a5e-99cd-4387-ba1d-e1d6c6a2ebfd",
+                  "parentUUID": "bf66b62f-4117-49f9-9842-892164dac006",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "3b001a5e-99cd-4387-ba1d-e1d6c6a2ebfd"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1111,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1573708144563' stop='1573708166874'>
+    <name>Actions</name>
+    <title>Actions</title>
+    <test-cases>
+        <test-case start='1573708144564' status='broken' stop='1573708166864'>
+            <name>.type() - type into a DOM element</name>
+            <title>.type() - type into a DOM element</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timed out retrying: expected '&lt;input#email1.form-control.action-email>' to have value 'slow.typing@email.com.something', but the value was 'slow.typing@email.com'</message>
+                <stack-trace>CypressError: Timed out retrying: expected '&lt;input#email1.form-control.action-email>' to have value 'slow.typing@email.com.something', but the value was 'slow.typing@email.com'
+                    at Object.cypressErr (https://example.cypress.io/__cypress/runner/cypress_runner.js:104940:11)
+                    at Object.throwErr (https://example.cypress.io/__cypress/runner/cypress_runner.js:104895:18)
+                    at Object.throwErrByPath (https://example.cypress.io/__cypress/runner/cypress_runner.js:104927:17)
+                    at retry (https://example.cypress.io/__cypress/runner/cypress_runner.js:96263:16)
+                    at onFailFn (https://example.cypress.io/__cypress/runner/cypress_runner.js:85359:16)
+                    at tryCatcher (https://example.cypress.io/__cypress/runner/cypress_runner.js:138967:23)
+                    at Promise._settlePromiseFromHandler (https://example.cypress.io/__cypress/runner/cypress_runner.js:136903:31)
+                    at Promise._settlePromise (https://example.cypress.io/__cypress/runner/cypress_runner.js:136960:18)
+                    at Promise._settlePromise0 (https://example.cypress.io/__cypress/runner/cypress_runner.js:137005:10)
+                    at Promise._settlePromises (https://example.cypress.io/__cypress/runner/cypress_runner.js:137080:18)
+                    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://example.cypress.io/__cypress/runner/cypress_runner.js:133692:16)
+                    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://example.cypress.io/__cypress/runner/cypress_runner.js:133702:10)
+                    at Async.drainQueues (https://example.cypress.io/__cypress/runner/cypress_runner.js:133576:14)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

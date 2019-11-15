@@ -1,0 +1,31 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : ".should() - make an assertion about the current subject",
+    "uid" : "3ba29d3c7a30a845",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1573708177698,
+      "stop" : 1573708179475,
+      "duration" : 1777
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : ".type() - type into a DOM element",
+    "uid" : "39282a015ace5a7b",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "broken",
+    "time" : {
+      "start" : 1573708144564,
+      "stop" : 1573708166864,
+      "duration" : 22300
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ]
+}

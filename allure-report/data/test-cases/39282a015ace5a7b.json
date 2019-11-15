@@ -1,0 +1,52 @@
+{
+  "uid" : "39282a015ace5a7b",
+  "name" : ".type() - type into a DOM element",
+  "fullName" : "Actions..type() - type into a DOM element",
+  "historyId" : "33e5647403f78286c549c4e6a996aa72",
+  "time" : {
+    "start" : 1573708144564,
+    "stop" : 1573708166864,
+    "duration" : 22300
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "Timed out retrying: expected '<input#email1.form-control.action-email>' to have value 'slow.typing@email.com.something', but the value was 'slow.typing@email.com'",
+  "statusTrace" : "CypressError: Timed out retrying: expected '<input#email1.form-control.action-email>' to have value 'slow.typing@email.com.something', but the value was 'slow.typing@email.com'\n                    at Object.cypressErr (https://example.cypress.io/__cypress/runner/cypress_runner.js:104940:11)\n                    at Object.throwErr (https://example.cypress.io/__cypress/runner/cypress_runner.js:104895:18)\n                    at Object.throwErrByPath (https://example.cypress.io/__cypress/runner/cypress_runner.js:104927:17)\n                    at retry (https://example.cypress.io/__cypress/runner/cypress_runner.js:96263:16)\n                    at onFailFn (https://example.cypress.io/__cypress/runner/cypress_runner.js:85359:16)\n                    at tryCatcher (https://example.cypress.io/__cypress/runner/cypress_runner.js:138967:23)\n                    at Promise._settlePromiseFromHandler (https://example.cypress.io/__cypress/runner/cypress_runner.js:136903:31)\n                    at Promise._settlePromise (https://example.cypress.io/__cypress/runner/cypress_runner.js:136960:18)\n                    at Promise._settlePromise0 (https://example.cypress.io/__cypress/runner/cypress_runner.js:137005:10)\n                    at Promise._settlePromises (https://example.cypress.io/__cypress/runner/cypress_runner.js:137080:18)\n                    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://example.cypress.io/__cypress/runner/cypress_runner.js:133692:16)\n                    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://example.cypress.io/__cypress/runner/cypress_runner.js:133702:10)\n                    at Async.drainQueues (https://example.cypress.io/__cypress/runner/cypress_runner.js:133576:14)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Actions"
+  }, {
+    "name" : "testClass",
+    "value" : "Actions"
+  }, {
+    "name" : "testMethod",
+    "value" : ".type() - type into a DOM element"
+  }, {
+    "name" : "package",
+    "value" : "Actions"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "39282a015ace5a7b.json",
+  "parameterValues" : [ ]
+}

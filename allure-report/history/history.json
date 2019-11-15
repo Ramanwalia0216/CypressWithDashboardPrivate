@@ -1,0 +1,41 @@
+{
+  "2746fb6f92cee353418306c28f19e975" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3ba29d3c7a30a845",
+      "status" : "passed",
+      "time" : {
+        "start" : 1573708177698,
+        "stop" : 1573708179475,
+        "duration" : 1777
+      }
+    } ]
+  },
+  "33e5647403f78286c549c4e6a996aa72" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "39282a015ace5a7b",
+      "status" : "broken",
+      "statusDetails" : "Timed out retrying: expected '<input#email1.form-control.action-email>' to have value 'slow.typing@email.com.something', but the value was 'slow.typing@email.com'",
+      "time" : {
+        "start" : 1573708144564,
+        "stop" : 1573708166864,
+        "duration" : 22300
+      }
+    } ]
+  }
+}

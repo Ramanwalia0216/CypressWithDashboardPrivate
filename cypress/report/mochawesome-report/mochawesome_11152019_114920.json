@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-11-15T06:18:59.849Z",
+    "end": "2019-11-15T06:19:20.798Z",
+    "duration": 20949,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c4ea330f-9e0b-4e83-a391-919d043a7415",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dcddf080-b4c4-434e-8467-1cebff79f644",
+          "title": "Actions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": ".type() - type into a DOM element",
+              "fullTitle": "Actions .type() - type into a DOM element",
+              "timedOut": null,
+              "duration": 11396,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  \"assets/examples/actions.spec.js/Actions -- .type() - type into a DOM element (failed).png\",\n  \"assets/examples/actions.spec.js.mp4\"\n]",
+              "code": "// https://on.cypress.io/type\ncy.get('.action-email').type('fake@email.com').should('have.value', 'fake@email.com') // .type() with special character sequences\n.type('{leftarrow}{rightarrow}{uparrow}{downarrow}').type('{del}{selectall}{backspace}') // .type() with key modifiers\n.type('{alt}{option}') //these are equivalent\n.type('{ctrl}{control}') //these are equivalent\n.type('{meta}{command}{cmd}') //these are equivalent\n.type('{shift}') // Delay each keypress by 0.1 sec\n.type('slow.typing@email.com', {\n  delay: 100\n}).should('have.value', 'slow.typing@email.com.something'); // Failed intentionally\ncy.get('.action-disabled') // Ignore error checking prior to type\n// like whether the input is visible or disabled\n.type('disabled error checking', {\n  force: true\n}).should('have.value', 'disabled error checking');",
+              "err": {
+                "message": "CypressError: Timed out retrying: expected '<input#email1.form-control.action-email>' to have value 'slow.typing@email.com.something', but the value was 'slow.typing@email.com'",
+                "estack": "CypressError: Timed out retrying: expected '<input#email1.form-control.action-email>' to have value 'slow.typing@email.com.something', but the value was 'slow.typing@email.com'\n    at Object.cypressErr (https://example.cypress.io/__cypress/runner/cypress_runner.js:104940:11)\n    at Object.throwErr (https://example.cypress.io/__cypress/runner/cypress_runner.js:104895:18)\n    at Object.throwErrByPath (https://example.cypress.io/__cypress/runner/cypress_runner.js:104927:17)\n    at retry (https://example.cypress.io/__cypress/runner/cypress_runner.js:96263:16)\n    at onFailFn (https://example.cypress.io/__cypress/runner/cypress_runner.js:85359:16)\n    at tryCatcher (https://example.cypress.io/__cypress/runner/cypress_runner.js:138967:23)\n    at Promise._settlePromiseFromHandler (https://example.cypress.io/__cypress/runner/cypress_runner.js:136903:31)\n    at Promise._settlePromise (https://example.cypress.io/__cypress/runner/cypress_runner.js:136960:18)\n    at Promise._settlePromise0 (https://example.cypress.io/__cypress/runner/cypress_runner.js:137005:10)\n    at Promise._settlePromises (https://example.cypress.io/__cypress/runner/cypress_runner.js:137080:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://example.cypress.io/__cypress/runner/cypress_runner.js:133692:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://example.cypress.io/__cypress/runner/cypress_runner.js:133702:10)\n    at Async.drainQueues (https://example.cypress.io/__cypress/runner/cypress_runner.js:133576:14)",
+                "diff": null
+              },
+              "uuid": "ff3a065a-811f-47b6-9943-b0cc555ea150",
+              "parentUUID": "dcddf080-b4c4-434e-8467-1cebff79f644",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ff3a065a-811f-47b6-9943-b0cc555ea150"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11396,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-11-15T06:19:29.642Z",
+    "end": "2019-11-15T06:19:38.499Z",
+    "duration": 8857,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e68cb3e1-7cf7-4efb-b7c7-3ae5a59f8bce",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "42bf5891-9d1d-49b7-b930-0049d172c569",
+          "title": "Aliasing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": ".as() - alias a DOM element for later use",
+              "fullTitle": "Aliasing .as() - alias a DOM element for later use",
+              "timedOut": null,
+              "duration": 5238,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  \"assets/examples/aliasing.spec.js/Aliasing -- .as() - alias a DOM element for later use (failed).png\",\n  \"assets/examples/aliasing.spec.js.mp4\"\n]",
+              "code": "// https://on.cypress.io/as\n// Alias a DOM element for use later\n// We don't have to traverse to the element\n// later in our code, we reference it with @\ncy.get('.as-table').find('tbody>tr').first().find('td').first().find('button').as('firstBtn'); // when we reference the alias, we place an\n// @ in front of its name\ncy.get('@firstBtn').click();\ncy.get('@firstBtn').should('have.class', 'btn-success.fail') // Made intetional changes to fail test case\n.and('contain', 'Changed');",
+              "err": {
+                "message": "CypressError: Timed out retrying: expected '<button.btn.btn-primary.btn-success>' to have class 'btn-success.fail'",
+                "estack": "CypressError: Timed out retrying: expected '<button.btn.btn-primary.btn-success>' to have class 'btn-success.fail'\n    at Object.cypressErr (https://example.cypress.io/__cypress/runner/cypress_runner.js:104940:11)\n    at Object.throwErr (https://example.cypress.io/__cypress/runner/cypress_runner.js:104895:18)\n    at Object.throwErrByPath (https://example.cypress.io/__cypress/runner/cypress_runner.js:104927:17)\n    at retry (https://example.cypress.io/__cypress/runner/cypress_runner.js:96263:16)\n    at onFailFn (https://example.cypress.io/__cypress/runner/cypress_runner.js:85359:16)\n    at tryCatcher (https://example.cypress.io/__cypress/runner/cypress_runner.js:138967:23)\n    at Promise._settlePromiseFromHandler (https://example.cypress.io/__cypress/runner/cypress_runner.js:136903:31)\n    at Promise._settlePromise (https://example.cypress.io/__cypress/runner/cypress_runner.js:136960:18)\n    at Promise._settlePromise0 (https://example.cypress.io/__cypress/runner/cypress_runner.js:137005:10)\n    at Promise._settlePromises (https://example.cypress.io/__cypress/runner/cypress_runner.js:137080:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://example.cypress.io/__cypress/runner/cypress_runner.js:133692:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://example.cypress.io/__cypress/runner/cypress_runner.js:133702:10)\n    at Async.drainQueues (https://example.cypress.io/__cypress/runner/cypress_runner.js:133576:14)",
+                "diff": null
+              },
+              "uuid": "2263febf-cda1-46a9-b71e-313928797e9a",
+              "parentUUID": "42bf5891-9d1d-49b7-b930-0049d172c569",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": ".as() - alias a route for later use",
+              "fullTitle": "Aliasing .as() - alias a route for later use",
+              "timedOut": null,
+              "duration": 1754,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Alias the route to wait for its response\ncy.server();\ncy.route('GET', 'comments/*').as('getComment'); // we have code that gets a comment when\n// the button is clicked in scripts.js\ncy.get('.network-btn').click(); // https://on.cypress.io/wait\ncy.wait('@getComment').its('status').should('eq', 200);",
+              "err": {},
+              "uuid": "9476c845-b46c-4608-8170-14d1032ab810",
+              "parentUUID": "42bf5891-9d1d-49b7-b930-0049d172c569",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9476c845-b46c-4608-8170-14d1032ab810"
+          ],
+          "failures": [
+            "2263febf-cda1-46a9-b71e-313928797e9a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6992,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}
